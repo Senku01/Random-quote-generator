@@ -1,22 +1,28 @@
-import React,{useState , useEffect} from 'react'
+import React,{useState} from 'react'
 import Header from './Header'
 
+const quotes = [
+  'The unspoken word never does harm.',
+  'We are bits of stellar matter that got cold by accident, bits of a star gone wrong.',
+  'The question should be, is it worth trying to do, not can it be done.',
+]
 function Apps() {
 
-  const [todos, setTodos] =  useState([])
-  const [task , setTask] = useState("")
+  const [quote, setQuote] = useState(quotes[0])
+
+  function randomizeQuote(){
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+    setQuote(randomQuote)
+  }
 
 
-  function createtodo(){
-     
 
-        setTask(evvent.target.value)
-      }}/>
-    <button onClick={createtodo}>Add</button>
-    <ul>
+  return <div>
 
-    </ul>
-  </div>
+
+    <div>{quote}</div>
+    <button onClick={randomizeQuote}> Click Me </button>
+    </div>
 }
 
 export default Apps
