@@ -10,10 +10,6 @@ function Apps() {
   function createtodo(){
      
 
-  }
-  return <div>
-    <h1>Best To-Do App </h1>
-    <input type="text " value={task} onChange={event => {
         setTask(evvent.target.value)
       }}/>
     <button onClick={createtodo}>Add</button>
